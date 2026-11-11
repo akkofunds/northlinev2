@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NORTHLINE</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#0b0e12;font-family:Inter,system-ui,sans-serif;color:#e8eef5}
+canvas{display:block;width:100vw;height:100vh}
+#hud{position:fixed;inset:0;pointer-events:none}
+.xh{position:absolute;left:50%;top:50%;--g:4px}
+.xh i{position:absolute;background:#7cffb2;box-shadow:0 0 0 1px #0009}
+.xh i:nth-child(1){width:2px;height:7px;left:-1px;top:calc(-7px - var(--g))}
+.xh i:nth-child(2){width:2px;height:7px;left:-1px;top:var(--g)}
+.xh i:nth-child(3){width:7px;height:2px;top:-1px;left:calc(-7px - var(--g))}
+.xh i:nth-child(4){width:7px;height:2px;top:-1px;left:var(--g)}
+#ammo{position:absolute;right:28px;bottom:24px;font:700 44px/1 system-ui;text-shadow:0 2px 8px #000}
+#ammo small{font-size:20px;opacity:.6}
+#stats{position:absolute;left:16px;top:12px;font:600 12px/1.6 ui-monospace,monospace;opacity:.85;text-shadow:0 1px 3px #000;white-space:pre}
+#start{position:fixed;inset:0;display:grid;place-items:center;background:#080b10cc;backdrop-filter:blur(6px);cursor:pointer}
+#start div{text-align:center;padding:36px 52px;border:1px solid #ff4655;background:#0f141bee;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+h1{margin:0 0 6px;letter-spacing:.3em;font-size:32px}h1 b{color:#ff4655}
+p{margin:4px 0;opacity:.75;font-size:13px}.go{margin-top:18px;font-weight:700;letter-spacing:.2em;color:#7cffb2}
+</style></head><body>
+<canvas id="c"></canvas>
+<div id="hud"><div class="xh" id="xh"><i></i><i></i><i></i><i></i></div><div id="ammo"><span id="mag">20</span> <small>/ <span id="res">120</span></small></div><div id="stats"></div></div>
+<div id="start"><div><h1>NORTH<b>LINE</b></h1><p>WASD move · Mouse aim · LMB fire · R reload · Shift walk</p>
+<p>Space / <b>Scroll wheel</b> = jump (buffered) · strafe in air to gain speed · B toggles auto-hop</p><div class="go">CLICK TO DEPLOY</div></div></div>
+<script type="module" src="/src/main.js"></script></body></html>
